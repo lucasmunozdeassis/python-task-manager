@@ -21,7 +21,7 @@ Aplicação web minimalista para gerenciamento de tarefas desenvolvida em Python
    ```bash
    git clone [https://github.com/lucasmunozdeassis/python-task-manager.git]
    
-   cd seu-repositorio
+   cd python-task-manager
 
     Crie e ative o ambiente virtual:
     Bash
