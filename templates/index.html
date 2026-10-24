@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de taréfas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>
+        Lista de taréfas
+    </h1>
+    <a href="{{ url_for('criar') }}">
+        <button type="button">Criar Nova Taréfa</button>
+    </a>
+    <ul>
+    {% for tarefa in tarefas %}
+        <li>
+            {{ tarefa.titulo }} - <strong>{{ tarefa.status }}</strong>
+            
+            <form action="{{ url_for('deletar') }}" method="post" style="display:inline;">
+                <input type="hidden" name="titulo" value="{{ tarefa.titulo }}">
+                <button type="submit">Apagar</button>
+            </form>
+        </li>
+    {% endfor %}
+</ul>
+</ul>
+</body>
+</html>

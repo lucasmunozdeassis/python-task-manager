@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Task Manager</title>
+</head>
+<body>
+    <form action="{{ url_for('criar') }}" method="post">
+        <label for="firstname">Tarefa:</label>
+        <input type="text" id="firstname" name="fname" placeholder="Nome da tarefa">
+        
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="pendente">Pendente</option>
+            <option value="feito">Feito</option>
+        </select>
+        
+        <button type="submit">Incluir</button>
+    </form>
+</body>
+</html>

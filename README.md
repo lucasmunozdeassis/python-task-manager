@@ -1,81 +1,45 @@
-# Python Task Manager
+# Gerenciador de Tarefas
 
-A simple task management application built with Python. This project was created to practice fundamental programming concepts, including classes, modules, dictionaries, user input, and JSON data storage.
+Aplicação web minimalista para gerenciamento de tarefas desenvolvida em Python com Flask, utilizando armazenamento em JSON e templates Jinja2.
 
-## Features
+## Funcionalidades
 
-- Add tasks with a custom status.
-- Store tasks in a Python dictionary.
-- Display the tasks added during the current session.
-- Export task data to a JSON-formatted text file.
+- **Criar**: Adiciona tarefas com título e status (Pendente ou Feito).
+- **Listar**: Exibe a lista de tarefas atualizada na página inicial.
+- **Deletar**: Remove tarefas individualmente.
+- **Persistência**: Dados salvos em arquivo JSON local (`tarefas.json`).
 
-## Technologies
+## Tecnologias
 
-- **Python 3**
-- **JSON** for data serialization
-- **Git and GitHub** for version control and project development
+- Python
+- Flask
+- HTML5 / CSS3
 
-## Project Structure
+## Como Executar
 
-```text
-python-task-manager/
-├── main.py
-├── classes.py
-└── README.md
-```
-
-## How to Run
-
-1. Make sure Python 3 is installed on your computer.
-2. Clone this repository:
-
+1. Clone o repositório e acesse a pasta:
    ```bash
-   git clone YOUR_REPOSITORY_URL
-   ```
+   git clone [https://github.com/lucasmunozdeassis/python-task-manager.git]
+   
+   cd seu-repositorio
 
-3. Navigate to the project directory:
+    Crie e ative o ambiente virtual:
+    Bash
 
-   ```bash
-   cd python-task-manager
-   ```
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+# No Windows: venv\Scripts\activate
 
-4. Run the application:
+Instale o Flask:
+Bash
 
-   ```bash
-   python3 main.py
-   ```
+pip install flask
 
-## Usage
+Inicie a aplicação:
+Bash
 
-When you run the program, it asks you to enter a task and its status.
+    python app.py
 
-- Enter a task name.
-- Enter the task status.
-- Continue adding tasks as needed.
-- Type `sair` to finish the input process.
+    Acesse no navegador: http://127.0.0.1:5000
 
-The application then displays the tasks and saves them in a text file using JSON format.
-
-## Learning Goals
-
-This project is part of my journey to improve my Python programming skills. It helps me practice:
-
-- Object-oriented programming.
-- Code organization using modules.
-- Dictionaries and data structures.
-- User input and control flow.
-- File handling and JSON serialization.
-
-## Future Improvements
-
-Planned improvements include:
-
-- Loading previously saved tasks when the application starts.
-- Updating and deleting existing tasks.
-- Validating task statuses.
-- Adding automated tests.
-- Improving code structure and error handling.
-
-## Author
-
-A personal project developed as part of my software development learning journey.
+Desenvolvido por Lucas Fernando Muñoz de Assis.
