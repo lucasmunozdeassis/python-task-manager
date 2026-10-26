@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lista de taréfas</title>
+    <title>Lista de tarefas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>
-        Lista de taréfas
+        Lista de tarefas
     </h1>
     <a href="{{ url_for('criar') }}">
-        <button type="button">Criar Nova Taréfa</button>
+        <button type="button">Criar Nova Tarefa</button>
     </a>
     <ul>
     {% for tarefa in tarefas %}
