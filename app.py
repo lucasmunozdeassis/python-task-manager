@@ -3,6 +3,47 @@ import json
 
 app = Flask(__name__)
 
+@app.route("/concluir", methods=["POST"])
+def concluir():
+    titulo_tarefa = request.form.get("titulo")
+    
+    try:
+        with open("tarefas.json", "r", encoding="utf-8") as f:
+            lista_tarefas = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        lista_tarefas = []
+        
+    for tarefa in lista_tarefas:
+        if tarefa.get("titulo") == titulo_tarefa:
+            tarefa["status"] = "concluído"
+            break  
+            
+    with open("tarefas.json", "w", encoding="utf-8") as f:
+        json.dump(lista_tarefas, f, ensure_ascii=False, indent=4)
+        
+    return redirect(url_for("home"))
+
+@app.route("/desconcluir", methods=["POST"])
+def desconcluir():
+    titulo_tarefa = request.form.get("titulo")
+    
+    try:
+        with open("tarefas.json", "r", encoding="utf-8") as f:
+            lista_tarefas = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        lista_tarefas = []
+        
+    for tarefa in lista_tarefas:
+        if tarefa.get("titulo") == titulo_tarefa:
+            tarefa["status"] = "Pendente"
+            break  
+            
+    with open("tarefas.json", "w", encoding="utf-8") as f:
+        json.dump(lista_tarefas, f, ensure_ascii=False, indent=4)
+        
+    return redirect(url_for("home"))
+
+
 @app.route("/")
 def home():
     try:

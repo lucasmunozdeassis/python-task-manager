@@ -1,10 +1,30 @@
 [
     {
-        "titulo": "Tarefa teste",
+        "titulo": "Estudar Ingles",
+        "status": "Pendente"
+    },
+    {
+        "titulo": "Criar Aula de amanha",
+        "status": "Pendente"
+    },
+    {
+        "titulo": "Comer algo",
         "status": "pendente"
     },
     {
-        "titulo": "Segunda Tarefa teste ",
-        "status": "feito"
+        "titulo": "Estudar programação",
+        "status": "pendente"
+    },
+    {
+        "titulo": "Cancelar curso BYU",
+        "status": "pendente"
+    },
+    {
+        "titulo": " Organizar Quarto ",
+        "status": "Pendente"
+    },
+    {
+        "titulo": "Lavar Roupa",
+        "status": "Pendente"
     }
 ]

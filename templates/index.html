@@ -12,14 +12,26 @@
         <button type="button">Criar Nova Tarefa</button>
     </a>
     <ul>
+        
     {% for tarefa in tarefas %}
-        <li>
-            {{ tarefa.titulo }} - <strong>{{ tarefa.status }}</strong>
-            
+    <li>---------------------------------------------------------------------------------------------------------------------------------------------</li>    
+    <li>
+            <strong>{{ tarefa.titulo }}</strong> <strong>→</strong> <strong>{{ tarefa.status }}</strong>
+            <li></li>
+
+            <form action="{{ url_for('concluir') }}" method="post" style="display:inline;">
+                <input type="hidden" name="titulo" value="{{ tarefa.titulo }}">
+                <button type="submit">concluir</button>
+            </form>
+            <form action="{{ url_for('desconcluir') }}" method="post" style="display:inline;">
+                <input type="hidden" name="titulo" value="{{ tarefa.titulo }}">
+                <button type="submit">não concluído</button>
+            </form>
             <form action="{{ url_for('deletar') }}" method="post" style="display:inline;">
                 <input type="hidden" name="titulo" value="{{ tarefa.titulo }}">
                 <button type="submit">Apagar</button>
             </form>
+            <li></li>
         </li>
     {% endfor %}
 </ul>
