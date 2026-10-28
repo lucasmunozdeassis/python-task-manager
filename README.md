@@ -1,45 +1,96 @@
-# Gerenciador de Tarefas
+Task Manager (Gerenciador de Tarefas)
 
-Aplicação web minimalista para gerenciamento de tarefas desenvolvida em Python com Flask, utilizando armazenamento em JSON e templates Jinja2.
+Uma aplicação web minimalista e funcional para gerenciamento de tarefas do dia a dia, desenvolvida em Python utilizando o microframework Flask, armazenamento leve em arquivo JSON e renderização dinâmica com Jinja2.
 
-## Funcionalidades
+Funcionalidades
 
-- **Criar**: Adiciona tarefas com título e status (Pendente ou Feito).
-- **Listar**: Exibe a lista de tarefas atualizada na página inicial.
-- **Deletar**: Remove tarefas individualmente.
-- **Persistência**: Dados salvos em arquivo JSON local (`tarefas.json`).
+Criar Tarefas: Adicione novas tarefas informando o nome e o status inicial (Pendente ou Feito).
 
-## Tecnologias
+Listar Tarefas: Visualize todas as suas tarefas cadastradas na página principal em tempo real.
 
-- Python
-- Flask
-- HTML5 / CSS3
+Marcar como Concluída: Altere o status de qualquer tarefa para "concluído" com um único clique.
 
-## Como Executar
+Reverter Status: Altere tarefas concluídas de volta para "Pendente".
 
-1. Clone o repositório e acesse a pasta:
-   ```bash
-   git clone [https://github.com/lucasmunozdeassis/python-task-manager.git]
-   
-   cd python-task-manager
+Excluir Tarefas: Remova tarefas que não são mais necessárias.
 
-    Crie e ative o ambiente virtual:
-    Bash
+Persistência de Dados: Salvamento automático em um arquivo local (tarefas.json), garantindo que seus dados não sejam perdidos ao fechar a aplicação.
+
+
+Tecnologias Utilizadas
+
+Backend: Python 3, Flask
+
+Frontend: HTML5, CSS3, Jinja2 (Template Engine)
+
+Armazenamento: JSON (persistência local)
+
+
+
+Estrutura do Projeto
+
+python-task-manager/
+│
+├── static/
+│   └── style.css          # Estilização da aplicação
+├── templates/
+│   ├── index.html         # Página principal (Listagem de tarefas)
+│   └── form.html          # Formulário de criação de tarefas
+├── app.py                 # Rotas e lógica da aplicação Flask
+├── tarefas.json           # Arquivo de persistência dos dados
+└── README.md              # Documentação do projeto
+
+
+Como Executar o Projeto
+
+Pró-requisitos
+
+Certifique-se de ter o Python instalado em sua máquina.
+
+Passo a Passo
+
+Clonar o repositório:
+
+git clone https://github.com/lucasmunozdeassis/python-task-manager.git
+cd python-task-manager
+
+
+Criar e ativar um ambiente virtual:
+
+Linux / macOS:
+
+python3 -m venv venv
+source venv/bin/activate
+
+
+Windows (PowerShell):
 
 python -m venv venv
-source venv/bin/activate  # Linux/macOS
-# No Windows: venv\Scripts\activate
+.\venv\Scripts\Activate.ps1
 
-Instale o Flask:
-Bash
+
+Windows (Prompt de Comando - CMD):
+
+python -m venv venv
+venv\Scripts\activate.bat
+
+
+Instalar as dependências:
 
 pip install flask
 
-Inicie a aplicação:
-Bash
 
-    python app.py
+Executar a aplicação:
 
-    Acesse no navegador: http://127.0.0.1:5000
+python app.py
+
+
+Acessar no navegador:
+Acesse a URL: http://127.0.0.1:5000
+
+
+Autor
 
 Desenvolvido por Lucas Fernando Muñoz de Assis.
+
+Sinta-se à vontade para contribuir com melhorias, novos recursos ou correções de bugs!
